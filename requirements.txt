@@ -1,0 +1,25 @@
+# ============================================================
+# Empathetic AI Companion — Python Dependencies
+# ============================================================
+# Install with:   pip install -r requirements.txt
+#
+# Raspberry Pi 5 extra steps (run BEFORE pip install):
+#   sudo apt update
+#   sudo apt install espeak-ng libespeak1 libatlas-base-dev libhdf5-dev libgtk-3-dev
+# ============================================================
+
+# --- Computer Vision ---
+opencv-python>=4.8.0            # Webcam capture + face overlay display
+
+# --- Emotion Detection (pretrained CNN, lightweight) ---
+fer>=22.5.1                     # Facial Emotion Recognition — wraps a small Keras CNN
+
+# --- Text-to-Speech (offline, no API key needed) ---
+pyttsx3>=2.98                   # Cross-platform TTS (SAPI5 on Windows, espeak on Linux)
+
+# --- Speech Recognition ---
+SpeechRecognition>=3.10         # Microphone input → text (uses Google free API)
+PyAudio>=0.2.14                 # Microphone access for SpeechRecognition
+
+# --- Numerical (auto-installed by opencv/tensorflow, pinned for clarity) ---
+numpy>=1.24
